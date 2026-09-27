@@ -1,11 +1,11 @@
 .calendar {
   display: flex;
   flex-flow: row wrap;
-  gap: 1px;
+  gap: $gap;
   padding-inline: 10px;
   justify-content: left;
 
-  width: $box-size * 7 + $gap * 6; // change!!!
+  width: $box-size * 7 + $gap * 6;
 
   &__day {
     box-sizing: border-box;
@@ -19,7 +19,7 @@
     font-size: 30px;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i}) {
@@ -32,6 +32,7 @@
     &:hover {
       cursor: pointer;
       transform: translate(0, -20px);
+      background-color: #FFBFCB;
     }
   }
 
